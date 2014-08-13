@@ -1,0 +1,39 @@
+
+.header
+{
+	background-color:yellowgreen;
+    position: relative;
+    top: 0px;
+    display: block;
+    height: 50px;
+}
+
+#jumbotron h1
+{
+    top:20px;
+	color: #ffb199;
+    background-image: url(/assets/pkm.jpg);
+    display: block;
+    width:10000px;
+    height:1000px;
+}
+
+.footer li
+{
+	display: block;
+	list-style: none;
+
+}
+
+
+.footer h1
+{
+	font-size: medium;
+	color:red;
+}
+
+a {
+    text-decoration: none;
+    color: #3D59AB;
+    font-family: Verdana, sans-serif;
+}
