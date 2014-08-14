@@ -5,37 +5,25 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <meta charset="utf-8" />
 </head>
 <body>
-    <div class="header">
-      <div class="title">
-        <h1>Pokémon</h1>
-        <p>Attrapez les tous!</p>
-      </div>
-      <div class="navigation">
-        <ul class="nav nav-pills">
-          <li><a href="#">Primeur</a></li>
-          <li class="active"><a href="#">SocialGame</a></li>
-          <li><a href="#">Promotions d'andral</a></li>
-          <li><a href="#">Président Daniel</a></li>
-        </ul>
-      </div>
-    </div>
-    <div id="jumbotron">
-      <h1>Title</h1>
-      <p>Love baby</p>
-      <a href="https://www.facebook.com/codecademy">Ajoutez-nous sur FB</a>
-    </div>
-
-    <%= yield %>
-
-    <div class="footer">
-      <h1>Contact</h1>
+<div class="container">
+  <header>
+    <%= image_tag("logo.png", :alt => "Application Exemple", :class => "round") %>
+    <nav class="round">
       <ul>
-        <li><a href="#">contact</a></li>
-        <li><a href="#">gay</a></li>
+        <li><%= link_to "Accueil", '/pages/home' %></li>
+        <li><%= link_to "Aide", '/help' %></li>
+        <li><%= link_to "Inscription", '/users/new' %></li>
       </ul>
-    </div>
+    </nav>
+  </header>
+  <section class="round">
+    <%= yield %>
+  </section>
+  <%= render 'layouts/footer' %>
+</div>
 </body>
 </html>
